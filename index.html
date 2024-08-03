@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playable Piano</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="piano-container">
+    <div class="key black-key"></div>
+    
+  </div>
+  <script>
+    let pianoContainer = document.getElementsByClassName("piano-container");
+    const base = "./audio/";
+    window.onload = () => {
+      const keys = 13;
+      const quotient = Math.floor(keys / 12), remainder = keys % 12;
+      let black_keys_count = remainder < 2 ? 0 : remainder < 4 ? 1 : remainder < 7 ? 2 : remainder < 9 ? 3 : remainder < 11 ? 4 : 5 ;
+      black_keys_count = quotient * 5 + black_keys_count;
+      console.log("quotient : " + quotient + " remainder : " + remainder + " black_keys : " + black_keys_count)
+
+      //24keys
+      for (let index = 1; index <= keys; index++) {
+        let div = document.createElement("div");
+        div.classList.add("key", index <= black_keys_count ? "black-key" : "white-key");
+        //For playing audio on click
+        // const number = index <= black_keys_count - 1 ? "0" + index : index;
+        // div.addEventListener("click", () => {
+        //   new Audio(`${base}key${number}.mp3`).play();
+        // });
+        pianoContainer[0].appendChild(div);
+      }
+    };
+  </script>
+</body>
+
+</html>

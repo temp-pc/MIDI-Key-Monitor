@@ -1,0 +1,3 @@
+★起動方法
+  このディレクトリに移動して、npm start
+  （package.json内に、  "scripts": { "start": "electron ." } の記載が必要
