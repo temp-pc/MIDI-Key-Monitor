@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #2887e3;
+  /* background-color: #2887e3; */
 }
 .piano-container {
   display: flex;
@@ -12,14 +12,13 @@ body {
   padding: 4em 1em 1em 1em;
   border-radius: 0.62em;
   background-color: #24272e;
-  box-shadow: 0 2em 4em rgba(7, 0, 53, 0.25);
 }
 .white-key {
-  width: 4.37em;
-  height: 17.5em;
+  width: 4em;
+  height: 18em;
   background-color: #ffffff;
   border-radius: 0 0 0.3em 0.3em;
-  border: 2px solid #24272e;
+  border: 0.1em solid #24272e;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -38,7 +37,7 @@ body {
 .black-key:hover {
   background-color: #24272e;
 }
-.black-key:nth-child(1) {
+/* .black-key:nth-child(1) {
   left: 4em;
 }
 .black-key:nth-child(2) {
@@ -67,7 +66,7 @@ body {
 }
 .black-key:nth-child(10) {
   left: 56.5em;
-}
+} */
 
 @media screen and (max-width: 1000px) {
   .piano-container {
