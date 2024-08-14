@@ -27,5 +27,3 @@ function onMIDIMessage(message) {
       key.classList.remove('active');
   }
 }
-
-
