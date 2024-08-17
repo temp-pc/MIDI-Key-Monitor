@@ -3,13 +3,17 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Playable Piano</title>
+  <title>MIDI Monitor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <select name="numberOfKeysSelector" id="numberOfKeysSelector"></select>
+  <div class="selector-container">
+    <label for="numberOfKeysSelector" class="selector-label">Keys:</label>
+    <select name="numberOfKeysSelector" id="numberOfKeysSelector" class="custom-select"></select>
+  </div>
   <div id="piano-container" class="piano-container">
+    <div id="piano-background" class="piano-background"></div>
   </div>
   <script src="renderer.js"></script>
 </body>

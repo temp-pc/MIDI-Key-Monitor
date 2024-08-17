@@ -3,8 +3,61 @@ body {
   margin: 0;
   /* background-color: #2887e3; */
 }
-.piano-container {
+
+.selector-container {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.selector-label {
+  margin-right: 10px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.custom-select {
+  appearance: none;
+  width: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  color: #333;
+  border: 2px solid #4a90e2;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-select:hover {
+  background-color: #ffffff;
+  border-color: #357ABD;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #1C6EA4;
+  box-shadow: 0 0 0 3px rgba(70, 130, 180, 0.4);
+}
+
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  font-size: 1rem;
+  color: #357ABD;
+}
+
+#numberOfKeysSelector {
+  margin: 10px 40px 10px 10px;
+}
+
+.piano-container {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -13,6 +66,17 @@ body {
   border-radius: 0.62em;
   background-color: #24272e;
 }
+
+.piano-background {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* 白の背景色 */
+  box-sizing: border-box;
+}
+
+
 .white-key {
   /* width: 4em; */
   height: 18em;
@@ -21,7 +85,10 @@ body {
   border: 0.1em solid #24272e;
   box-sizing: border-box;
   cursor: pointer;
+  box-shadow: 0 0 0 0.2em #24272e;
 }
+
+
 .black-key {
   height: 10em;
   border-radius: 0 0 0.3em 0.3em;
@@ -30,36 +97,6 @@ body {
   background-color: #070a0f;
   cursor: pointer;
 }
-/* .black-key:nth-child(1) {
-  left: 4em;
-}
-.black-key:nth-child(2) {
-  left: 8.37em;
-}
-.black-key:nth-child(3) {
-  left: 17.12em;
-}
-.black-key:nth-child(4) {
-  left: 21.5em;
-}
-.black-key:nth-child(5) {
-  left: 25.87em;
-}
-.black-key:nth-child(6) {
-  left: 34.62em;
-}
-.black-key:nth-child(7) {
-  left: 39em;
-}
-.black-key:nth-child(8) {
-  left: 47.75em;
-}
-.black-key:nth-child(9) {
-  left: 52.12em;
-}
-.black-key:nth-child(10) {
-  left: 56.5em;
-} */
 
 /* @media screen and (max-width: 1000px) {
   .piano-container {
